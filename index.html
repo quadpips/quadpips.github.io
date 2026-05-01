@@ -131,6 +131,66 @@
             </div>
         </section>
         <!-- End paper abstract -->
+
+        <!-- Paper method -->
+        <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Approach Summary</h2>
+                    <div class="video-container" style="margin-bottom: 24px;">
+                        <img src="static/images/diagram.png" alt="QuadPiPS search and optimization diagram" style="width: 100%; max-width: 560px; border-radius: 8px;">
+                        <p class="subtitle is-6" style="margin-top: 12px; color: #555;">System overview: robot subproblems are solved in parallel with consensus on interaction wrenches; trajectories are executed by local wrench-aware WBC.</p>
+                    </div>
+                    <div class="content has-text-justified">
+                        <p>
+                            To perform foothold planning over the egocan environment representation, QuadPiPS draws inspiration from the Augmented Leafs with Experience on Foliations (ALEF) framework. However, existing ALEF implementations perform offline kinematic planning over entirely known environments, and the time required to generate feasible paths ranges from seconds to minutes. In this work, an extension of the Simple Linear Iterative Clustering (SLIC) superpixels algorithm oversegments the egocan floor to facilitate exhaustive searching over candidate footholds through a contact mode family transition graph. Then, a nonlinear trajectory optimization formulation synthesizes kinodynamically-feasible and real-time whole body reference trajectories that transition the system between stances. Lastly, a Model Predictive Controller (MPC) and Whole Body Controller (WBC) track this reference trajectory.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- End paper method -->        
         
+        <!-- Simulation Demonstrations -->
+        <section class="hero is-small is-light">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-four-fifths">
+                            <h2 class="title is-3">Simulation Demonstrations</h2>
+                            <div class="columns is-multiline" style="margin-top: 16px;">
+                                <div class="column is-half">
+                                    <video poster="" autoplay controls muted loop style="width: 100%; border-radius: 8px;">
+                                        <source src="static/videos/ramped_balance_beam_stacked_cropped.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="subtitle is-6" style="margin-top: 6px;"><strong>Ramped Balance Beam</strong></p>
+                                </div>
+                                    <div class="column is-half">
+                                    <video poster="" autoplay controls muted loop style="width: 100%; border-radius: 8px;">
+                                        <source src="static/videos/ramped_stepping_stones_stacked_cropped.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="subtitle is-6" style="margin-top: 6px;"><strong>Ramped Stepping Stones</strong></p>
+                                </div>
+                                <div class="column is-half">
+                                    <video poster="" autoplay controls muted loop style="width: 100%; border-radius: 8px;">
+                                        <source src="static/videos/sparse_stepping_stones_stacked_cropped.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="subtitle is-6" style="margin-top: 6px;"><strong>Sparse Stepping Stones</strong></p>
+                                </div>
+                                    <div class="column is-half">
+                                    <video poster="" autoplay controls muted loop style="width: 100%; border-radius: 8px;">
+                                        <source src="static/videos/split_beams_stacked_cropped.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="subtitle is-6" style="margin-top: 6px;"><strong>Split Beams</strong> — Dual-platform configuration for dynamic balance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </body>
 </html>
