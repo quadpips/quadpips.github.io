@@ -90,7 +90,7 @@
             </div>
         </section>
 
-        <!-- Hardware demonstrations(teaser) -->
+        <!-- Scenario overview -->
         <section class="hero teaser" style="padding-top: 4rem;">
             <div class="container is-max-desktop">
                 <div class="hero-body">
@@ -104,6 +104,33 @@
                     </p>
                 </div>
             </div>
-        </section>        
+        </section>
+        <!-- End scenario overview -->
+
+        <!-- Paper abstract & video (BeyondMimic-style layout) -->
+        <section class="section hero is-light">
+            <div class="container is-max-desktop">
+                <div class="columns">
+                <div class="column is-half">
+                    <h2 class="title is-3">Video</h2>
+                        <div class="video-abstract-card" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid #ddd;">
+                        <video controls playsinline poster="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; background: #000;">
+                            <source src="static/videos/quadpips_public.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content" style="font-size: 0.8rem; line-height: 1.45;">
+                        <p class="has-text-justified" style="margin: 0;">
+                            This work proposes QuadPiPS, a perception-informed framework for quadrupedal foothold planning in the perception space. QuadPiPS employs a novel ego-centric local environment representation, known as the legged egocan, that is extended here to capture unique legged affordances through a joint geometric and semantic encoding that supports local motion planning and control for quadrupeds. QuadPiPS takes inspiration from the Augmented Leafs with Experience on Foliations (ALEF) planning framework to partition the foothold planning space into its discrete and continuous subspaces. To facilitate real-world deployment, QuadPiPS broadens the ALEF approach by synthesizing perception-informed, real-time, and kinodynamically-feasible reference trajectories through search and trajectory optimization techniques. To support deliberate and exhaustive searching, QuadPiPS over-segments the egocan floor via superpixels to provide a set of planar regions suitable for candidate footholds. Nonlinear trajectory optimization methods then compute swing trajectories to transition between selected footholds and provide long-horizon whole-body reference motions that are tracked under model predictive control and whole body control. Benchmarking with the ANYmal C quadruped across ten simulation environments and five baselines reveals that QuadPiPS excels in safety-critical settings with limited available footholds. Real-world validation on the Unitree Go2 quadruped equipped with a custom computational suite demonstrates that QuadPiPS enables terrain-aware locomotion on hardware.                    
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- End paper abstract -->
+        
     </body>
 </html>
